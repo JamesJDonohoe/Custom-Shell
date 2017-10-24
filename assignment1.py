@@ -68,8 +68,17 @@ class MyPrompt(Cmd):
         print('---------------------------------')
         print('--Select the following commands--')
         print('---------------------------------')
-        print('pw, dt, ifc, ud, ls, quit')
+        print('pw, dt, ifc, ud, ls, quit, secrets')
         print('---------------------------------')
+        
+    def do_secret(self, args):
+        print('----------------------------------------')
+        print('-You have unlocked secrets... try these-')
+        print('---------Enter r2d2 for a secret--------')
+        print('----------------------------------------')
+        
+    def do_r2d2(self, args):
+        telnet towel.blinkenlights.nl
         
 	
 if __name__ == '__main__':
