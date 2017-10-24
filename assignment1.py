@@ -52,16 +52,16 @@ class MyPrompt(Cmd):
         
     def do_ud(self, args):
         usr = getpass.getuser()
-	print "User: ",usr
-	usrID = pwd.getpwnam(usr).pw_uid
-	print "User ID: ",str(usrID)
-	groupID = pwd.getpwnam(usr).pw_gid
-	print "Group ID: ",str(groupID)
-	groupName = grp.getgrgid(groupID).gr_name
-	print "Group Name: ",groupName
-	homeDir = os.getenv("HOME")
-	homeDirInfo = os.stat(homeDir)
-	iNode = homeDirInfo.st_ino
+        print "User: ",usr
+        usrID = pwd.getpwnam(usr).pw_uid
+        print "User ID: ",str(usrID)
+        groupID = pwd.getpwnam(usr).pw_gid
+        print "Group ID: ",str(groupID)
+        groupName = grp.getgrgid(groupID).gr_name
+        print "Group Name: ",groupName
+        homeDir = os.getenv("HOME")
+        homeDirInfo = os.stat(homeDir)
+        iNode = homeDirInfo.st_ino
         print "iNode: ",str(iNode)
     
     def do_CMD(self, args):
@@ -78,7 +78,7 @@ class MyPrompt(Cmd):
         print('----------------------------------------')
         
     def do_r2d2(self, args):
-        telnet towel.blinkenlights.nl
+        print(telnet towel.blinkenlights.nl)
         
 	
 if __name__ == '__main__':
