@@ -78,7 +78,7 @@ class MyPrompt(Cmd):
         print('----------------------------------------')
         
     def do_r2d2(self, args):
-        print(telnet towel.blinkenlights.nl)
+        os.system('telnet towel.blinkenlights.nl')
         
 	
 if __name__ == '__main__':
