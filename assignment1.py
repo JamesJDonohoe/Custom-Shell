@@ -68,7 +68,7 @@ class MyPrompt(Cmd):
         print('---------------------------------')
         print('--Select the following commands--')
         print('---------------------------------')
-        print('pw, dt, ifc, ud, ls, quit, secrets')
+        print('pw, dt, ifc, ud, ls, quit, secret')
         print('---------------------------------')
         
     def do_secret(self, args):
