@@ -5,7 +5,7 @@
 currentDirectoryPath = ""
 
 from cmd import Cmd
-import os, time, getpass, ifc_file
+import os, time, getpass, ifc_file, grp
 
 
 class MyPrompt(Cmd):
@@ -49,12 +49,26 @@ class MyPrompt(Cmd):
         global currentDirectoryPath
         currentDirectoryPath = result
         print(result)
+        
+    def do_ud(self, args):
+        usr = getpass.getuser()
+	print "User: ",usr
+	usrID = pwd.getpwnam(usr).pw_uid
+	print "User ID: ",str(usrID)
+	groupID = pwd.getpwnam(usr).pw_gid
+	print "Group ID: ",str(groupID)
+	groupName = grp.getgrgid(groupID).gr_name
+	print "Group Name: ",groupName
+	homeDir = os.getenv("HOME")
+	homeDirInfo = os.stat(homeDir)
+	iNode = homeDirInfo.st_ino
+        print "iNode: ",str(iNode)
     
     def do_CMD(self, args):
         print('---------------------------------')
         print('--Select the following commands--')
         print('---------------------------------')
-        print('pw, dt, ls, quit, ifc, ud')
+        print('pw, dt,, ifc, ud, ls, quit')
         print('---------------------------------')
         
 	
