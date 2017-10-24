@@ -5,7 +5,7 @@
 currentDirectoryPath = ""
 
 from cmd import Cmd
-import os, time, getpass, ifc_file, grp
+import os, time, getpass, ifc_file, grp, pwd
 
 
 class MyPrompt(Cmd):
@@ -68,7 +68,7 @@ class MyPrompt(Cmd):
         print('---------------------------------')
         print('--Select the following commands--')
         print('---------------------------------')
-        print('pw, dt,, ifc, ud, ls, quit')
+        print('pw, dt, ifc, ud, ls, quit')
         print('---------------------------------')
         
 	
