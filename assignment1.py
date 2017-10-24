@@ -54,7 +54,7 @@ class MyPrompt(Cmd):
         print('---------------------------------')
         print('--Select the following commands--')
         print('---------------------------------')
-        print('pw, dt, ls, quit')
+        print('pw, dt, ls, quit, ifc, ud')
         print('---------------------------------')
         
 	
